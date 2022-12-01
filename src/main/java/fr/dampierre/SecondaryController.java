@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+
 public class SecondaryController {
 
     @FXML
@@ -27,6 +28,7 @@ public class SecondaryController {
     @FXML
     void switchColor(ActionEvent event) {
         vue2_coucou.setText("COUCOU !");
-        secondaryButton.disableProperty();
-    }
+        secondaryButton.setDisable(true);
+        buttonColor.setStyle("-fx-text-fill: red");
+        }
 }
