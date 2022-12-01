@@ -38,42 +38,42 @@ public class App extends Application {
 
     public static void main(String[] args) {
         // launch();
-        connexionBDD();
+        // connexionBDD();
     }
 
-    public static void connexionBDD() {
+    // public static void connexionBDD() {
 
-        String dbURL = "jdbc:mysql://localhost:3306/sample";
-        String nomUtilisateur = "monid";
-        String mdp = "monmotdepassefort";
+    //     String dbURL = "jdbc:mysql://localhost:3306/sample";
+    //     String nomUtilisateur = "monid";
+    //     String mdp = "monmotdepassefort";
 
-        try {
-            // Connexion en passant les informations spécifiées précédemment
-            Connection conn = DriverManager.getConnection(dbURL, nomUtilisateur, mdp);
-            // Si on est bien connecté à la DB
-            if (conn != null) {
-                // On affiche un petit message sur le terminal
-                System.out.println("Connexion réussie !");
-            }
-        } catch (SQLException ex) {
-            // Code de traitement d'erreur
-            ex.printStackTrace();
-        }
+    //     try {
+    //         // Connexion en passant les informations spécifiées précédemment
+    //         Connection conn = DriverManager.getConnection(dbURL, nomUtilisateur, mdp);
+    //         // Si on est bien connecté à la DB
+    //         if (conn != null) {
+    //             // On affiche un petit message sur le terminal
+    //             System.out.println("Connexion réussie !");
+    //         }
+    //     } catch (SQLException ex) {
+    //         // Code de traitement d'erreur
+    //         ex.printStackTrace();
+    //     }
 
-        String sql = "SELECT nom, email FROM utilisateurs";
+    //     String sql = "SELECT nom, email FROM utilisateurs";
 
-        Statement requete = conn.createStatement();
+    //     Statement requete = conn.createStatement();
 
-        ResultSet res = requete.executeQuery(sql);
+    //     ResultSet res = requete.executeQuery(sql);
 
-        int compteur = 0;
+    //     int compteur = 0;
 
-        while (res.next()) {
-            compteur++;
-            String nom = res.getString("nom");
-            String email = res.getString("email");
-            String sortie = "Utilisateur no. " + compteur + " : " + nom + " (" + email + ")";
-            System.out.println(sortie);
-        }
-    }
+    //     while (res.next()) {
+    //         compteur++;
+    //         String nom = res.getString("nom");
+    //         String email = res.getString("email");
+    //         String sortie = "Utilisateur no. " + compteur + " : " + nom + " (" + email + ")";
+    //         System.out.println(sortie);
+    //     }
+    // }
 }
